@@ -14,6 +14,10 @@ return require('packer').startup(function(use)
     }
 
     use({ 'rose-pine/neovim', as = 'rose-pine' })
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
 
     vim.cmd('colorscheme rose-pine')
 
@@ -46,4 +50,5 @@ return require('packer').startup(function(use)
 
     }
     use { "zbirenbaum/copilot.lua" }
+    use { "christoomey/vim-tmux-navigator" }
 end)
